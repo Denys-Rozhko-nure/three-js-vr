@@ -9,15 +9,29 @@
     <!-- Import maps polyfill -->
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.148.0/three.module.js"
+      integrity="sha512-TBsRPqWeusJljmmEij9waZ9K+qO2m6W1pu+5h5BjxvdizD1Izn1wwJyVYNFFFH42tIfedURxTsgtXF2Lah2PXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="importmap">
       {
         "imports": {
-          "three": "./node_modules/three/build/three.module.js",
-          "three/addons/": "./node_modules/three/examples/jsm/"
+          "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.148.0/three.module.js",
+          "three/addons/": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.148.0/three.module.js/examples/jsm/"
+        }
+      }
+    </script> -->
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.148.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.148.0/examples/jsm/"
         }
       }
     </script>
-
     <script type="module">
       import * as THREE from "three";
       import { OrbitControls } from "three/addons/controls/OrbitControls.js";
